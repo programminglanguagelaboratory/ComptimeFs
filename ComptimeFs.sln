@@ -7,6 +7,8 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "src", "src", "{316E06CA-7E3
 EndProject
 Project("{F2A71F9B-5D33-465A-A702-920D77279786}") = "ComptimeFs.Cli", "src\ComptimeFs.Cli\ComptimeFs.Cli.fsproj", "{B217B8F4-D64B-47BF-BD24-639DFB51E9D6}"
 EndProject
+Project("{F2A71F9B-5D33-465A-A702-920D77279786}") = "ComptimeFs", "src\ComptimeFs\ComptimeFs.fsproj", "{21C0C3B7-58BB-4B14-9897-DA144BC1E15A}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -20,8 +22,13 @@ Global
 		{B217B8F4-D64B-47BF-BD24-639DFB51E9D6}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{B217B8F4-D64B-47BF-BD24-639DFB51E9D6}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{B217B8F4-D64B-47BF-BD24-639DFB51E9D6}.Release|Any CPU.Build.0 = Release|Any CPU
+		{21C0C3B7-58BB-4B14-9897-DA144BC1E15A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{21C0C3B7-58BB-4B14-9897-DA144BC1E15A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{21C0C3B7-58BB-4B14-9897-DA144BC1E15A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{21C0C3B7-58BB-4B14-9897-DA144BC1E15A}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(NestedProjects) = preSolution
 		{B217B8F4-D64B-47BF-BD24-639DFB51E9D6} = {316E06CA-7E37-4ABE-B2C2-93751A399932}
+		{21C0C3B7-58BB-4B14-9897-DA144BC1E15A} = {316E06CA-7E37-4ABE-B2C2-93751A399932}
 	EndGlobalSection
 EndGlobal
