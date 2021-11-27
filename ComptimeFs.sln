@@ -3,9 +3,9 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 16
 VisualStudioVersion = 16.0.30114.105
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "src", "src", "{C8D155AB-59D2-4942-91F0-7808D05DCD85}"
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "src", "src", "{316E06CA-7E37-4ABE-B2C2-93751A399932}"
 EndProject
-Project("{F2A71F9B-5D33-465A-A702-920D77279786}") = "ComptimeFs", "src\ComptimeFs\ComptimeFs.fsproj", "{AA4C37E5-9C53-4828-B484-8D6D49D2E1E9}"
+Project("{F2A71F9B-5D33-465A-A702-920D77279786}") = "ComptimeFs.Cli", "src\ComptimeFs.Cli\ComptimeFs.Cli.fsproj", "{B217B8F4-D64B-47BF-BD24-639DFB51E9D6}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -16,12 +16,12 @@ Global
 		HideSolutionNode = FALSE
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{AA4C37E5-9C53-4828-B484-8D6D49D2E1E9}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{AA4C37E5-9C53-4828-B484-8D6D49D2E1E9}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{AA4C37E5-9C53-4828-B484-8D6D49D2E1E9}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{AA4C37E5-9C53-4828-B484-8D6D49D2E1E9}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B217B8F4-D64B-47BF-BD24-639DFB51E9D6}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B217B8F4-D64B-47BF-BD24-639DFB51E9D6}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B217B8F4-D64B-47BF-BD24-639DFB51E9D6}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B217B8F4-D64B-47BF-BD24-639DFB51E9D6}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(NestedProjects) = preSolution
-		{AA4C37E5-9C53-4828-B484-8D6D49D2E1E9} = {C8D155AB-59D2-4942-91F0-7808D05DCD85}
+		{B217B8F4-D64B-47BF-BD24-639DFB51E9D6} = {316E06CA-7E37-4ABE-B2C2-93751A399932}
 	EndGlobalSection
 EndGlobal
