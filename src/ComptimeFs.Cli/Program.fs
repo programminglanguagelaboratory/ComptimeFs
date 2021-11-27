@@ -1,4 +1,4 @@
-﻿module ComptimeFs.Cli.Program
+module ComptimeFs.Cli.Program
 
 open ComptimeFs
 open System.IO
