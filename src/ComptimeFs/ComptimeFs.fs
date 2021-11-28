@@ -1,6 +1,6 @@
 ﻿module ComptimeFs
 
-module FileSystemGenerator =
+module Codegen =
     [<Literal>]
     let Template =
         """module {{ moduleName }}
@@ -28,3 +28,6 @@ let tryRead (path: string) : byte seq option = Map.tryFind path fileSystem
         Template
         |> fun t -> t.Replace("{{ moduleName }}", moduleNameStr)
         |> fun t -> t.Replace("{{ fileSystem }}", fileSystemStr)
+
+module Mounter =
+    let resolve (mounts: string list) : Map<string, byte array> = failwith "not impl"

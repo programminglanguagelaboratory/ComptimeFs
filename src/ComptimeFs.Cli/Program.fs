@@ -5,17 +5,13 @@ open System.IO
 
 [<EntryPoint>]
 let main args =
-    let moduleName, paths =
+    let moduleName, mounts =
         match Array.toList args with
         | "-m" :: moduleName :: paths -> moduleName, paths
         | paths -> "FileSystem", paths
 
-    let fileSystem =
-        paths
-        |> Seq.map (fun p -> p, File.ReadAllBytes p)
-        |> Map.ofSeq
-
-    FileSystemGenerator.generate moduleName fileSystem
+    Mounter.resolve mounts
+    |> Codegen.generate moduleName
     |> fun sourceCode -> File.WriteAllText("FileSystem.fs", sourceCode)
 
     0
