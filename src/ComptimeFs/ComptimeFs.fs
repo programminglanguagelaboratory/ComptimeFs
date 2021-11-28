@@ -4,9 +4,9 @@ module FileSystemGenerator =
     [<Literal>]
     let Template =
         """module {{ moduleName }}
-let private files: Map<string, byte seq> = Map.ofSeq {{ files }}
+let private fileSystem : Map<string, byte seq> = {{ fileSystem }}
 
-let tryRead (path: string) : byte seq option = Map.tryFind path files
+let tryRead (path: string) : byte seq option = Map.tryFind path fileSystem
 """
 
     let generateContentsStr (contents: byte array) : string =
@@ -15,16 +15,16 @@ let tryRead (path: string) : byte seq option = Map.tryFind path files
         |> String.concat "; "
         |> fun bss -> $"[| {bss} |]"
 
-    let generate (moduleName: string) (files: Map<string, byte array>) : string =
+    let generate (moduleName: string) (fileSystem: Map<string, byte array>) : string =
         let moduleNameStr = $"``{moduleName}``"
 
-        let filesStr =
-            files
+        let fileSystemStr =
+            fileSystem
             |> Map.toSeq
             |> Seq.map (fun (path, contents) -> $""""{path}", {generateContentsStr contents}""")
             |> String.concat "; "
-            |> fun fss -> $"[| {fss} |]"
+            |> fun fss -> $"Map.ofSeq [| {fss} |]"
 
         Template
         |> fun t -> t.Replace("{{ moduleName }}", moduleNameStr)
-        |> fun t -> t.Replace("{{ files }}", filesStr)
+        |> fun t -> t.Replace("{{ fileSystem }}", fileSystemStr)
