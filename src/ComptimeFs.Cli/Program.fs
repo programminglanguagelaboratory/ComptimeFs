@@ -10,7 +10,9 @@ let main args =
         | "-m" :: moduleName :: paths -> moduleName, paths
         | paths -> "FileSystem", paths
 
-    Mounter.resolve mounts
+    mounts
+    |> List.map Mounter.resolve
+    |> Map.ofList
     |> Codegen.generate moduleName
     |> fun sourceCode -> File.WriteAllText("FileSystem.fs", sourceCode)
 

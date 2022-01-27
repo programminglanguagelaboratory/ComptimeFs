@@ -30,4 +30,10 @@ let tryRead (path: string) : byte seq option = Map.tryFind path fileSystem
         |> fun t -> t.Replace("{{ fileSystem }}", fileSystemStr)
 
 module Mounter =
-    let resolve (mounts: string list) : Map<string, byte array> = failwith "not impl"
+    let resolve (mount: string) : string * byte array =
+        let src, dst =
+            match mount.Split ':' with
+            | [| src |] -> src, src
+            | [| src; dst |] -> src, dst
+            | _ -> failwith $"invalid mount: {mount}"
+        dst, System.IO.File.ReadAllBytes src
